@@ -495,7 +495,9 @@ body.dark-mode .premium-btn span {
 /* Mobile-First Fixes */
 @media (max-width: 768px) {
   /* Premium Section Fix */
-
+  .nav{
+padding: 0 10px;
+}
   .plans-container {
     grid-template-columns: 1fr;
     padding: 0;
