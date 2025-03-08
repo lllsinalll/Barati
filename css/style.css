@@ -627,8 +627,8 @@ body.dark-mode .premium-btn span {
 
 /* Cart Modal Positioning Fix */
 .cart-modal {
-  top: 60px;
-  height: calc(100vh - 60px);
+  top: 64px;
+  height: calc(100vh - 64px);
 }
 
 /* Premium Section Card Height Fix */
