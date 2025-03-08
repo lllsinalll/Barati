@@ -491,57 +491,134 @@ body.dark-mode .premium-btn span {
   color: var(--primary-color);
 }
 
+/* Mobile-First Fixes */
 @media (max-width: 768px) {
-  .products {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 1rem;
-    gap: 1rem;
+  /* Premium Section Fix */
+  .plans-container {
+    grid-template-columns: 1fr;
+    padding: 0;
   }
-  .logo {
+
+  .plan-card {
+    margin: 0 1rem;
+    padding: 1.5rem;
+  }
+
+  .premium-title {
     font-size: 2rem;
+    padding: 0 1rem;
   }
-  .logo-image {
-    width: 50px;
-    height: 53px;
-  }
+
+  /* Cart Modal Fix */
   .cart-modal {
-    width: 70%;
+    width: 100%;
+    right: -100%;
+    padding: 1rem;
   }
-  .nav-items {
-    gap: 1rem;
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  .nav-link {
-    display: none;
+
+  /* Contact Page Fix */
+  .contact-info {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .info-card {
+    text-align: center;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
   }
 }
 
 @media (max-width: 480px) {
+  /* Header/Nav Fix */
   .nav {
+    flex-wrap: wrap;
+    gap: 1rem;
     padding: 0.5rem;
   }
+
   .logo {
+    font-size: 1.8rem;
+  }
+
+  .logo-image {
+    width: 45px;
+    height: 45px;
+  }
+
+  /* Premium Section Fix */
+  .plan-card {
+    margin: 0 0.5rem;
+    padding: 1rem;
+  }
+
+  .price {
     font-size: 1.5rem;
   }
-  .logo-image {
+
+  /* Cart Items Fix */
+  .cart-item img {
     width: 40px;
-    height: 43px;
+    height: 40px;
   }
+
+  /* Contact Page Fix */
+  .map-container iframe {
+    height: 300px;
+  }
+
+  /* General Mobile Fixes */
   .products {
     grid-template-columns: 1fr;
-    margin-top: 60px;
+    padding: 1rem;
   }
-  .cart-modal {
-    width: 100%;
+
+  .product-card {
+    max-width: 100%;
   }
-  .dark-mode-toggle {
-    bottom: 10px;
-    right: 10px;
-    padding: 0.8rem;
-  }
-  .search-container {
-    width: 120px;
-  }
-  .account-btn {
-    font-size: 1rem;
-  }
+}
+
+/* Additional Universal Fixes */
+/* Ensure viewport meta tag is present */
+/* Add this if not in your HTML */
+/* <meta name="viewport" content="width=device-width, initial-scale=1.0"> */
+
+/* Contact Page Centering Fix */
+.contact-info {
+  max-width: 100%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+/* Cart Modal Positioning Fix */
+.cart-modal {
+  top: 60px;
+  height: calc(100vh - 60px);
+}
+
+/* Premium Section Card Height Fix */
+.plan-card {
+  min-height: auto;
+  height: auto;
+}
+
+/* Mobile Menu Items Fix */
+.nav-items {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Input Field Mobile Fix */
+.search-input {
+  font-size: 14px;
+  padding: 8px 12px;
 }
