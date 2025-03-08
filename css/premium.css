@@ -206,3 +206,7 @@ body.dark-mode .back-home:hover {
     padding: 1rem;
   }
 }
+.plan-card {
+    min-height: auto;
+    height: auto;
+  }
