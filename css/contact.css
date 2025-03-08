@@ -1,0 +1,382 @@
+/* Contact Page Styles */
+:root {
+  --primary-color: #ff6b6b;
+  --secondary-color: #4ecdc4;
+  --dark-color: #2d3436;
+  --light-color: #f9f9f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: var(--light-color);
+  transition: background 0.3s, color 0.3s;
+  overflow-x: hidden;
+}
+
+body.dark-mode {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+/* Header Styles */
+.header {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+body.dark-mode .header {
+  background: var(--dark-color);
+  border-bottom: 1px solid #444;
+}
+
+/* Nav Container */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+  height: 64px;
+}
+
+/* Logo Section */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin: 0;
+  font-family: serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s;
+}
+
+body.dark-mode .logo {
+  color: white;
+}
+
+.logo-image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: invert(0);
+}
+
+body.dark-mode .logo-image {
+  filter: invert(1) brightness(1.5);
+}
+
+.logo-image:hover {
+  transform: scale(1.2);
+}
+
+/* Navigation Link */
+.nav-link {
+  background: var(--primary-color);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  background: #ff5252;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* Auth Container */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 160px);
+  padding: 2rem;
+  margin-top: 120px;
+}
+
+.auth-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 450px;
+  transition: all 0.3s;
+}
+
+body.dark-mode .auth-card {
+  background: #34495e;
+  border: 1px solid #444;
+}
+
+.auth-title {
+  color: var(--dark-color);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+body.dark-mode .auth-title {
+  color: white;
+}
+
+/* Form Elements */
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  color: var(--primary-color);
+  z-index: 1;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  color: var(--primary-color);
+  background: transparent;
+  border: none;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 12px 15px 12px 40px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  background: white;
+  color: var(--dark-color);
+}
+
+body.dark-mode .input-container input {
+  background: #444;
+  border-color: #666;
+  color: white;
+}
+
+/* Button Styles */
+.auth-btn {
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.auth-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--dark-color);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.3s;
+}
+
+body.dark-mode .dark-mode-toggle {
+  background: var(--light-color);
+  color: var(--dark-color);
+}
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.back-home {
+  color: var(--dark-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.back-home:hover {
+  color: var(--primary-color);
+  transform: translateY(-1px);
+}
+
+.back-home i {
+  transition: transform 0.3s;
+}
+
+.back-home:hover i {
+  transform: translateX(-3px);
+}
+
+body.dark-mode .back-home {
+  color: white;
+}
+
+body.dark-mode .back-home:hover {
+  color: var(--primary-color);
+}
+
+.contact-info {
+  background: var(--light-color);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 450px;
+}
+
+body.dark-mode .contact-info {
+  background: #34495e;
+  border: 1px solid #444;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark-color);
+}
+
+body.dark-mode .contact-item {
+  color: white;
+}
+
+.contact-item i {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  min-width: 30px;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.social-links a {
+  color: var(--dark-color);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .social-links a {
+  color: white;
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 15px 12px 40px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  background: white;
+  color: var(--dark-color);
+  font-family: inherit;
+  resize: vertical;
+}
+
+body.dark-mode textarea {
+  background: #444;
+  border-color: #666;
+  color: white;
+}
+
+.map-container {
+  margin: 2rem auto;
+  max-width: 1200px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.social-links a {
+  color: var(--dark-color);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  display: inline-block; /* Added for smooth transform */
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+  transform: scale(1.2); /* Enlarge effect */
+  transform-origin: center; /* Keep scaling centered */
+}
+
+/* Existing dark mode styles remain the same */
+body.dark-mode .social-links a {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    margin: 2rem 1rem;
+  }
+
+  .auth-container {
+    min-height: auto;
+    margin-top: 100px;
+  }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Modern Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="logo-container">
+          <div class="logo">Reza Barati</div>
+          <img src="sol.png" class="logo-image" alt="Company Logo" />
+        </div>
+        <div class="nav-items">
+          <a href="index.html" class="back-home">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Home</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="auth-container">
+      <div class="auth-card">
+        <h2 class="auth-title">Contact Us</h2>
+        <form id="contactForm" class="auth-form">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <div class="input-container">
+              <i class="fas fa-user input-icon"></i>
+              <input type="text" id="name" name="name" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <div class="input-container">
+              <i class="fas fa-envelope input-icon"></i>
+              <input type="email" id="email" name="email" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <div class="input-container">
+              <i class="fas fa-tag input-icon"></i>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <div class="input-container">
+              <i class="fas fa-comment input-icon"></i>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="auth-btn">Send Message</button>
+        </form>
+      </div>
+    </main>
+
+    <div class="contact-info">
+      <div class="info-card">
+        <h3>Get in Touch</h3>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Mazadaran<br />Babolsar, Bla Bla 10001</p>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <p>+98 (911) 123-4567</p>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <p>support@Bullshit.com</p>
+        </div>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20709.544138414!2d52.64331865105474!3d36.7007410683293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8582e0a12f0c6f%3A0x9a3c7f8a2a3e3e3d!2sBabolsar%2C%20Mazandaran%20Province%2C%20Iran!5e0!3m2!1sen!2sus!4v1718723132353!5m2!1sen!2sus"
+        width="100%"
+        height="400"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <button class="dark-mode-toggle">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="register.js"></script>
+  </body>
+</html>

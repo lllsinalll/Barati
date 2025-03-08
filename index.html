@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="logo-container">
+          <div class="logo">Reza Barati</div>
+          <img src="sol.png" class="logo-image" alt="Company Logo" />
+        </div>
+
+        <div class="nav-items">
+          <a href="#" class="nav-link active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </a>
+          <a href="Premium.html" class="nav-link premium-btn">
+            <i class="fas fa-crown"></i>
+            <span>Premium</span>
+          </a>
+          <div class="search-container">
+            <input
+              type="text"
+              placeholder="Search products..."
+              class="search-input"
+            />
+            <i class="fas fa-search search-icon"></i>
+          </div>
+          <div class="account-dropdown">
+            <button class="account-btn">
+              <i class="fas fa-user"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="login.html">Login</a>
+              <a href="register.html">Register</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </div>
+      </nav>
+    </header>
+
+    <div class="banner">
+      <div class="banner-content">
+        <img src="banner.jpg" alt="Sales Banner" class="banner-image" />
+      </div>
+    </div>
+
+    <main>
+      <section class="products">
+        <!-- Product cards will be dynamically added here -->
+      </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal">
+      <h2>Your Cart</h2>
+      <div class="cart-items"></div>
+    </div>
+
+    <button class="dark-mode-toggle">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
