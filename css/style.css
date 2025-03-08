@@ -495,13 +495,7 @@ body.dark-mode .premium-btn span {
 /* Mobile-First Fixes */
 @media (max-width: 768px) {
   /* Premium Section Fix */
- .header {
-    height: 70px;
-  }
-  
-  .nav {
-    height: 70px;
-  }
+
   .plans-container {
     grid-template-columns: 1fr;
     padding: 0;
