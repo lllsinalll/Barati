@@ -496,11 +496,11 @@ body.dark-mode .premium-btn span {
 @media (max-width: 768px) {
   /* Premium Section Fix */
  .header {
-    height: 60px;
+    height: 70px;
   }
   
   .nav {
-    height: 60px;
+    height: 70px;
   }
   .plans-container {
     grid-template-columns: 1fr;
