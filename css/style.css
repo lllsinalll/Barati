@@ -313,13 +313,14 @@ body.dark-mode .nav-link.active:hover {
 
 .cart-modal {
   position: fixed;
-  top: 80px;
+  top: 60px;
   right: -400px;
   width: 400px;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 60px);
   background: white;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
   transition: right 0.3s;
+  padding-top:0;
   padding: 1rem;
   max-width: 100%;
   z-index: 99;
@@ -519,15 +520,24 @@ body.dark-mode .premium-btn span {
   }
 
   .cart-item {
+    padding:1rem 0;
+    margin:0;
     flex-direction: column;
     align-items: flex-start;
+  }
+ .cart-item img {
+    margin-top: 0.5rem;
   }
  .cart-modal.active {
     right: 0;
   }
-  .cart-item {
-    flex-direction: column;
-    align-items: flex-start;
+.cart-modal::before {
+  content: "";
+  display: block;
+  height: 10px;
+  width: 100%;
+.cart-total {
+    padding-bottom: 80px; /* Space for fixed button */
   }
   .cart-items {
     padding-bottom: 80px; /* Space for total/actions */
